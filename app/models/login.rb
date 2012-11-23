@@ -1,5 +1,4 @@
 class Login < ActiveRecord::Base
-
 	validates :username,:email, :presence => true, :uniqueness => true
 	belongs_to :gender
 	belongs_to :nationality
