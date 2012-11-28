@@ -1,0 +1,48 @@
+<div class="right_content">                    
+
+
+    <h2>LIST OF EMPLOYEES</h2> 
+                    
+                    
+<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+    <thead>
+    	<tr><th></th>
+        	<th scope="col" class="rounded">Employee Id</th>
+            <th scope="col" class="rounded">Name</th>
+            <th scope="col" class="rounded">Email ID<th>
+            <th scope="col" class="rounded">Employee Type</th>
+            <th scope="col" class="rounded">Edit</th>
+            <th scope="col" class="rounded-q4">Delete</th>
+        </tr>
+    </thead>
+        <tfoot>
+    	<tr>
+        	<td class="rounded-foot-right">&nbsp;</td>
+        </tr>
+    </tfoot>
+    
+    <tbody>
+        <% count=0%>
+        <% for each_id in @list_of_emp %>
+    	<tr>
+            <td><input type="checkbox" name="" /></td>
+        	<td><%=each_id.id%></td>
+            <td colspan='2'><%=each_id.username%></td>
+            <td><%=each_id.email%></td>
+            <td><%=each_id.employee_type%></td>
+            <td><a href="edit?id=<%=each_id.id%>"><img src="/assets/user_edit.png" alt="" title="" border="0" /></a></td>
+            <td><a href="#" class="ask"><img src="/assets/trash.png" alt="" title="" border="0" /></a></td>
+        </tr>
+       <%end%>
+    </tbody>
+</table>
+
+	 <a href="#" class="bt_green"><span class="bt_green_lft"></span><strong>Add new item</strong><span class="bt_green_r"></span></a>
+     <a href="#" class="bt_blue"><span class="bt_blue_lft"></span><strong>View all items from category</strong><span class="bt_blue_r"></span></a>
+     <a href="#" class="bt_red"><span class="bt_red_lft"></span><strong>Delete items</strong><span class="bt_red_r"></span></a> 
+     
+     
+        <div class="pagination">
+        <span class="disabled"><< prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">10</a><a href="">11</a><a href="">12</a>...<a href="">100</a><a href="">101</a><a href="">next >></a>
+        </div> 
+     

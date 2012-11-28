@@ -8,6 +8,9 @@ class AdminMainPageController < ApplicationController
 	end
 
 	def new_reg
+
+
+	
 		@d= Date.today
 		@emp_id = Login.last
        	@inc_val = @emp_id.emp_id + 1      
@@ -17,7 +20,12 @@ class AdminMainPageController < ApplicationController
 		@nationlities=Nationality.find(:all)
 		@region=Region.find(:all)
 		@blood_group=BloodGroup.find(:all)
+	
+		
 	end
+
+	end
+
 	def save
 		@login=Login.new(params[:employee_detail])
 		
@@ -27,5 +35,21 @@ class AdminMainPageController < ApplicationController
 		else
 		   redirect_to :controller=>'/admin_main_page', :action => 'new_reg'
 		end
+
+	end
+
+
+	def list_of_emp
+		@list_of_emp = Login.find(:all)
+	end
+
+	def edit
+		@edit= Login.where(:id => params[:id].to_i).first
+		@gender=Gender.find(:all)
+		@nationlities=Nationality.find(:all)
+		@region=Region.find(:all)
+		@blood_group=BloodGroup.find(:all)
+		
+
 	end
 end

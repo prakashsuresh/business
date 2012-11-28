@@ -22,7 +22,7 @@ class LoginController < ApplicationController
        elsif params[:login][:usertype] =="admin"
             @login_check=Login.where(:username => params[:user_name_field] , :password => params[:password_field],:employee_type=>"HR").first
             if !@login_check.blank?
-            redirect_to :controller=>'/admin_main_page', :action => 'home',:user_id=>@login_check
+            redirect_to :controller=>'/admin_main_page', :action => 'new_reg',:user_id=>@login_check
             else
             redirect_to(root_url,:notice => 'Please Enter Valid User Name/Password')
             end

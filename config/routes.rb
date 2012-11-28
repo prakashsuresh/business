@@ -53,12 +53,14 @@ Business::Application.routes.draw do
      root :to => 'login#login'
      #match '/main_menu',   :to => 'login#main_menu'
      match '/goto_login', :to => 'login#goto_login'
-     match '/home',   :to => 'admin_main_page#home'
+     match '/home',   :to => 'admin_main_page#new_reg'
      match '/main_page', :to =>'main_page#show'
      match '/logout', :to=>'login#login'
      match '/login_home', :to =>'login#login'
      match '/new_reg', :to =>'admin_main_page#new_reg'
      match '/save', :to =>'admin_main_page#save'
+     match '/edit', :to =>'admin_main_page#edit'
+     match '/list_of_emp', :to =>'admin_main_page#list_of_emp'
 
   # See how all your routes lay out with "rake routes"
 
