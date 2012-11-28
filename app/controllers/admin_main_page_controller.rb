@@ -22,7 +22,7 @@ class AdminMainPageController < ApplicationController
 		
 	end
 
-	end
+	
 
 
 	def save		
