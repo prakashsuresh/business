@@ -5,5 +5,5 @@ class Login < ActiveRecord::Base
 	belongs_to :nationality
 	belongs_to :blood_group
 	belongs_to :region
-	
+	#error_messages_for '@employee_detail'
 end
