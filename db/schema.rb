@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121109132449) do
+ActiveRecord::Schema.define(:version => 20121123100725) do
+
+  create_table "banks", :force => true do |t|
+    t.integer  "acc_no"
+    t.string   "name"
+    t.float    "balance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "blood_groups", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "genders", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "logins", :force => true do |t|
     t.string   "username"
@@ -20,6 +40,30 @@ ActiveRecord::Schema.define(:version => 20121109132449) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "employee_type"
+    t.integer  "emp_id"
+    t.string   "adress"
+    t.integer  "phone_no"
+    t.date     "dob"
+    t.date     "admission_date"
+    t.integer  "basic_salary"
+    t.integer  "bank_acc_no"
+    t.string   "resume"
+    t.integer  "gender_id"
+    t.integer  "blood_group_id"
+    t.integer  "region_id"
+    t.integer  "nationality_id"
+  end
+
+  create_table "nationalities", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "regions", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

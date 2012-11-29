@@ -13,7 +13,7 @@ class LoginController < ApplicationController
     def goto_login
 
        if params[:login][:usertype] =="employee"
-            @login_check=Login.where(:username => params[:user_name_field] , :password => params[:password_field],:employee_type=>"employee").first
+            @login_check=Login.where(:username => params[:user_name_field] , :password => params[:password_field]).first
             if !@login_check.blank?
             redirect_to :controller=>'/main_page', :action => 'show',:user_id=>@login_check
             else

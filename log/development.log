@@ -62303,6 +62303,87 @@ ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
   
 
 Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320@business_gemset/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+<<<<<<< HEAD
+  [1m[36m (59.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateLogins (20121109074250)
+Migrating to AddEmployeeTypeToLogins (20121109132449)
+Migrating to CreateBanks (20121123100725)
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36m (306.4ms)[0m  [1mCREATE TABLE "banks" ("id" serial primary key, "acc_no" integer, "name" character varying(255), "balance" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121123100725')
+  [1m[36m (13.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.9ms)[0m  [1mSHOW search_path[0m
+  [1m[35m (36.2ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'banks'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36m (1.4ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'blood_groups'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35m (1.6ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'genders'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36m (2.0ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'logins'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35m (2.1ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'nationalities'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36m (2.0ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'regions'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-28 14:58:58 +0530
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/login_layout (6.1ms)
+Cache for Asset (application.js) is stale
+/home/jayprakash/.rvm/gems/ruby-1.9.2-p320@business_gemset/gems/jquery-rails-2.1.3/vendor/assets/javascripts/jquery.js isn't in paths: /home/jayprakash/work/rails3/business/app/assets/images, /home/jayprakash/work/rails3/business/app/assets/javascripts, /home/jayprakash/work/rails3/business/app/assets/stylesheets, /home/jayprakash/work/rails3/business/vendor/assets/stylesheets, /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/jquery-rails-2.1.3/vendor/assets/javascripts
+Compiled application.js  (23ms)  (pid 10684)
+Completed 200 OK in 275ms (Views: 274.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 14:58:59 +0530
+=======
 
 
 Started GET "/" for 127.0.0.1 at 2012-11-23 14:17:21 +0530
@@ -62317,10 +62398,452 @@ Completed 200 OK in 211ms (Views: 210.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/style.css" for 127.0.0.1 at 2012-11-23 14:17:22 +0530
+>>>>>>> 8ee61d3540c1d6d88e52559d72813ab70294a06b
 
 ActionController::RoutingError (No route matches [GET] "/style.css"):
   
 
+<<<<<<< HEAD
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-28 14:58:59 +0530
+Served asset /jquery.js - 200 OK (40ms)
+
+
+Started GET "/assets/admin_main_page.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /admin_main_page.js - 200 OK (9ms)
+
+
+Started GET "/assets/bank.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /bank.js - 200 OK (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /jquery_ujs.js - 200 OK (11ms)
+
+
+Started GET "/assets/clockh.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /clockh.js - 200 OK (14ms)
+
+
+Started GET "/assets/clockp.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /clockp.js - 200 OK (12ms)
+
+
+Started GET "/assets/ddaccordion.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /ddaccordion.js - 200 OK (9ms)
+
+
+Started GET "/assets/datetimepicker.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /datetimepicker.js - 200 OK (12ms)
+
+
+Started GET "/assets/jquery-1.4.2.min.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /jquery-1.4.2.min.js - 200 OK (13ms)
+
+
+Started GET "/assets/jconfirmaction.jquery.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /jconfirmaction.jquery.js - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /jquery.min.js - 200 OK (8ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /login.js - 200 OK (9ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /main_page.js - 200 OK (8ms)
+
+
+Started GET "/assets/niceforms.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /niceforms.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/assets/login_style.css?body=1" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /login_style.css - 200 OK (0ms)
+
+
+Started GET "/assets/icon.ico" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /icon.ico - 200 OK (30ms)
+
+
+Started GET "/assets/headerbg.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /headerbg.jpg - 200 OK (99ms)
+
+
+Started GET "/assets/lefttxtbg.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /lefttxtbg.jpg - 200 OK (107ms)
+
+
+Started GET "/assets/menu.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /menu.jpg - 200 OK (16ms)
+
+
+Started GET "/assets/lefticon.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /lefticon.jpg - 200 OK (57ms)
+
+
+Started GET "/assets/header.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /header.jpg - 200 OK (10ms)
+
+
+Started GET "/assets/leftnavactive.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /leftnavactive.jpg - 200 OK (53ms)
+
+
+Started GET "/assets/loginbg.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /loginbg.jpg - 200 OK (14ms)
+
+
+Started GET "/assets/footerbg.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /footerbg.jpg - 200 OK (8ms)
+
+
+Started GET "/assets/footer.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /footer.jpg - 200 OK (8ms)
+
+
+Started GET "/assets/footerbox.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /footerbox.jpg - 200 OK (11ms)
+
+
+Started GET "/assets/footerbutton.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /footerbutton.jpg - 200 OK (19ms)
+
+
+Started GET "/assets/xhtml.jpg" for 127.0.0.1 at 2012-11-28 14:59:00 +0530
+Served asset /xhtml.jpg - 200 OK (8ms)
+
+
+Started POST "/goto_login" for 127.0.0.1 at 2012-11-28 14:59:14 +0530
+  Processing by LoginController#goto_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RwOAJo9d/nfqMRGLy0OjB4gG/crQZAb8wCtdgbtVfL8=", "login"=>{"usertype"=>"admin"}, "user_name_field"=>"jayaprakash", "password_field"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mLogin Load (14.5ms)[0m  [1mSELECT "logins".* FROM "logins" WHERE "logins"."username" = 'jayaprakash' AND "logins"."password" = 'suresh' AND "logins"."employee_type" = 'HR' LIMIT 1[0m
+Redirected to http://localhost:3008/home?user_id=2
+Completed 302 Found in 116ms
+
+
+Started GET "/home?user_id=2" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+  Processing by AdminMainPageController#home as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mLogin Load (1.2ms)[0m  SELECT "logins".* FROM "logins" ORDER BY username
+Rendered admin_main_page/home.html.erb within layouts/admin_layout (9.1ms)
+Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/clockh.js" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /clockh.js - 200 OK (0ms)
+
+
+Started GET "/assets/jconfirmaction.jquery.js" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /jconfirmaction.jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.min.js" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /jquery.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/ddaccordion.js" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /ddaccordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/clockp.js" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /clockp.js - 200 OK (0ms)
+
+
+Started GET "/assets/niceforms-default.css" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /niceforms-default.css - 200 OK (32ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/assets/admin_main_page.css?body=1" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /admin_main_page.css - 200 OK (0ms)
+
+
+Started GET "/assets/logo.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /logo.gif - 200 OK (14ms)
+
+
+Started GET "/assets/trash.png" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /trash.png - 200 OK (12ms)
+
+
+Started GET "/assets/user_edit.png" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /user_edit.png - 200 OK (16ms)
+
+
+Started GET "/assets/indeziner_logo.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /indeziner_logo.gif - 200 OK (30ms)
+
+
+Started GET "/assets/search.png" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /search.png - 200 OK (26ms)
+
+
+Started GET "/assets/comment.png" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /comment.png - 200 OK (18ms)
+
+
+Started GET "/assets/user_logout.png" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /user_logout.png - 200 OK (13ms)
+
+
+Started GET "/assets/sidebar_menu_top.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /sidebar_menu_top.gif - 200 OK (28ms)
+
+
+Started GET "/assets/menu_bg.jpg" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /menu_bg.jpg - 200 OK (20ms)
+
+
+Started GET "/assets/menu_bg.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /menu_bg.gif - 200 OK (27ms)
+
+
+Started GET "/assets/left.jpg" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /left.jpg - 200 OK (15ms)
+
+
+Started GET "/assets/right.jpg" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /right.jpg - 200 OK (14ms)
+
+
+Started GET "/assets/botleft.jpg" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /botleft.jpg - 200 OK (20ms)
+
+
+Started GET "/assets/botright.jpg" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /botright.jpg - 200 OK (57ms)
+
+
+Started GET "/assets/bt_green_left.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /bt_green_left.gif - 200 OK (8ms)
+
+
+Started GET "/assets/bt_green_center.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /bt_green_center.gif - 200 OK (8ms)
+
+
+Started GET "/assets/bt_green_r.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /bt_green_r.gif - 200 OK (17ms)
+
+
+Started GET "/assets/bt_blue_left.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /bt_blue_left.gif - 200 OK (14ms)
+
+
+Started GET "/assets/bt_blue_r.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /bt_blue_r.gif - 200 OK (15ms)
+
+
+Started GET "/assets/bt_blue_center.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /bt_blue_center.gif - 200 OK (14ms)
+
+
+Started GET "/assets/bt_red_left.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /bt_red_left.gif - 200 OK (9ms)
+
+
+Started GET "/assets/bt_red_center.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /bt_red_center.gif - 200 OK (43ms)
+
+
+Started GET "/assets/bt_red_r.gif" for 127.0.0.1 at 2012-11-28 14:59:15 +0530
+Served asset /bt_red_r.gif - 200 OK (24ms)
+
+
+Started GET "/assets/footer_bg.jpg" for 127.0.0.1 at 2012-11-28 14:59:16 +0530
+Served asset /footer_bg.jpg - 200 OK (11ms)
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2012-11-28 14:59:16 +0530
+Served asset /bg.jpg - 200 OK (16ms)
+
+
+Started GET "/assets/plus.gif" for 127.0.0.1 at 2012-11-28 14:59:16 +0530
+Served asset /plus.gif - 200 OK (9ms)
+
+
+Started GET "/assets/sidebar_menu_top_a.gif" for 127.0.0.1 at 2012-11-28 14:59:16 +0530
+Served asset /sidebar_menu_top_a.gif - 200 OK (12ms)
+
+
+Started GET "/assets/trans.gif" for 127.0.0.1 at 2012-11-28 14:59:17 +0530
+Served asset /trans.gif - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/trans.gif"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/menu_bg_a.gif" for 127.0.0.1 at 2012-11-28 14:59:17 +0530
+Served asset /menu_bg_a.gif - 200 OK (10ms)
+
+
+Started GET "/assets/minus.gif" for 127.0.0.1 at 2012-11-28 14:59:19 +0530
+Served asset /minus.gif - 200 OK (8ms)
+
+
+Started GET "/new_reg" for 127.0.0.1 at 2012-11-28 14:59:24 +0530
+  Processing by AdminMainPageController#new_reg as HTML
+  [1m[36mLogin Load (1.3ms)[0m  [1mSELECT "logins".* FROM "logins" ORDER BY "logins"."id" DESC LIMIT 1[0m
+  [1m[35mGender Load (14.3ms)[0m  SELECT "genders".* FROM "genders" 
+  [1m[36mNationality Load (1.6ms)[0m  [1mSELECT "nationalities".* FROM "nationalities" [0m
+  [1m[35mRegion Load (1.6ms)[0m  SELECT "regions".* FROM "regions" 
+  [1m[36mBloodGroup Load (1.8ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups" [0m
+Rendered admin_main_page/new_reg.html.erb within layouts/admin_layout (37.0ms)
+Completed 200 OK in 204ms (Views: 48.3ms | ActiveRecord: 55.0ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 14:59:24 +0530
+
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/datetimepicker.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:24 +0530
+Served asset /datetimepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cal.gif" for 127.0.0.1 at 2012-11-28 14:59:24 +0530
+Served asset /cal.gif - 200 OK (36ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 14:59:24 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/admin_main_page.css?body=1" for 127.0.0.1 at 2012-11-28 14:59:24 +0530
+Served asset /admin_main_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 14:59:24 +0530
+Served asset /defaults.js - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 14:59:24 +0530
+Served asset /defaults.js - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/new_reg" for 127.0.0.1 at 2012-11-28 14:59:29 +0530
+  Processing by AdminMainPageController#new_reg as HTML
+  [1m[35mLogin Load (1.7ms)[0m  SELECT "logins".* FROM "logins" ORDER BY "logins"."id" DESC LIMIT 1
+  [1m[36mGender Load (1.2ms)[0m  [1mSELECT "genders".* FROM "genders" [0m
+  [1m[35mNationality Load (1.3ms)[0m  SELECT "nationalities".* FROM "nationalities" 
+  [1m[36mRegion Load (1.2ms)[0m  [1mSELECT "regions".* FROM "regions" [0m
+  [1m[35mBloodGroup Load (1.2ms)[0m  SELECT "blood_groups".* FROM "blood_groups" 
+Rendered admin_main_page/new_reg.html.erb within layouts/admin_layout (15.0ms)
+Completed 200 OK in 44ms (Views: 17.7ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 14:59:29 +0530
+
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 14:59:29 +0530
+Served asset /defaults.js - 404 Not Found (13ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/datetimepicker.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:29 +0530
+Served asset /datetimepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin_main_page.css?body=1" for 127.0.0.1 at 2012-11-28 14:59:29 +0530
+Served asset /admin_main_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 14:59:29 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 14:59:29 +0530
+Served asset /defaults.js - 404 Not Found (13ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/new_reg" for 127.0.0.1 at 2012-11-28 14:59:30 +0530
+  Processing by AdminMainPageController#new_reg as HTML
+  [1m[36mLogin Load (1.1ms)[0m  [1mSELECT "logins".* FROM "logins" ORDER BY "logins"."id" DESC LIMIT 1[0m
+  [1m[35mGender Load (0.9ms)[0m  SELECT "genders".* FROM "genders" 
+  [1m[36mNationality Load (0.9ms)[0m  [1mSELECT "nationalities".* FROM "nationalities" [0m
+  [1m[35mRegion Load (1.0ms)[0m  SELECT "regions".* FROM "regions" 
+  [1m[36mBloodGroup Load (1.0ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups" [0m
+Rendered admin_main_page/new_reg.html.erb within layouts/admin_layout (15.2ms)
+Completed 200 OK in 37ms (Views: 17.9ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 14:59:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/admin_main_page.css?body=1" for 127.0.0.1 at 2012-11-28 14:59:30 +0530
+Served asset /admin_main_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 14:59:30 +0530
+Served asset /defaults.js - 404 Not Found (14ms)
+=======
 Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
 
 
@@ -62751,10 +63274,115 @@ Served asset /admin_main_page.css - 304 Not Modified (0ms)
 
 Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-23 14:18:41 +0530
 Served asset /defaults.js - 404 Not Found (4ms)
+>>>>>>> 8ee61d3540c1d6d88e52559d72813ab70294a06b
 
 ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
   
 
+<<<<<<< HEAD
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 14:59:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/datetimepicker.js?body=1" for 127.0.0.1 at 2012-11-28 14:59:30 +0530
+Served asset /datetimepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 14:59:30 +0530
+Served asset /defaults.js - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/trans.gif" for 127.0.0.1 at 2012-11-28 14:59:35 +0530
+Served asset /trans.gif - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/trans.gif"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-11-28 15:01:57 +0530
+  Processing by AdminMainPageController#home as HTML
+  [1m[35mLogin Load (1.6ms)[0m  SELECT "logins".* FROM "logins" ORDER BY username
+Rendered admin_main_page/home.html.erb within layouts/admin_layout (11.4ms)
+Completed 200 OK in 18ms (Views: 9.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 15:01:57 +0530
+
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 15:01:57 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/admin_main_page.css?body=1" for 127.0.0.1 at 2012-11-28 15:01:57 +0530
+Served asset /admin_main_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 15:01:57 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/trans.gif" for 127.0.0.1 at 2012-11-28 15:01:59 +0530
+Served asset /trans.gif - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/trans.gif"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/list.html" for 127.0.0.1 at 2012-11-28 15:01:59 +0530
+
+ActionController::RoutingError (No route matches [GET] "/list.html"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/trans.gif" for 127.0.0.1 at 2012-11-28 15:02:07 +0530
+Served asset /trans.gif - 404 Not Found (9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/trans.gif"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+  Processing by AdminMainPageController#home as HTML
+  [1m[36mLogin Load (1.1ms)[0m  [1mSELECT "logins".* FROM "logins" ORDER BY username[0m
+Rendered admin_main_page/home.html.erb within layouts/admin_layout (7.2ms)
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+=======
 Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
 
 
@@ -62864,10 +63492,162 @@ Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/style.css" for 127.0.0.1 at 2012-11-23 14:35:20 +0530
+>>>>>>> 8ee61d3540c1d6d88e52559d72813ab70294a06b
 
 ActionController::RoutingError (No route matches [GET] "/style.css"):
   
 
+<<<<<<< HEAD
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/clockp.js" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /clockp.js - 200 OK (0ms)
+
+
+Started GET "/assets/clockh.js" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /clockh.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.min.js" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /jquery.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/ddaccordion.js" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /ddaccordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/niceforms-default.css" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /niceforms-default.css - 200 OK (0ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/jconfirmaction.jquery.js" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /jconfirmaction.jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin_main_page.css?body=1" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /admin_main_page.css - 200 OK (0ms)
+
+
+Started GET "/assets/logo.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /logo.gif - 200 OK (0ms)
+
+
+Started GET "/assets/search.png" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /search.png - 200 OK (0ms)
+
+
+Started GET "/assets/user_edit.png" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /user_edit.png - 200 OK (0ms)
+
+
+Started GET "/assets/trash.png" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /trash.png - 200 OK (0ms)
+
+
+Started GET "/assets/indeziner_logo.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /indeziner_logo.gif - 200 OK (0ms)
+
+
+Started GET "/assets/minus.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /minus.gif - 200 OK (4ms)
+
+
+Started GET "/assets/footer_bg.jpg" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /footer_bg.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bg.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/menu_bg.jpg" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /menu_bg.jpg - 200 OK (10ms)
+
+
+Started GET "/assets/left.jpg" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /left.jpg - 200 OK (13ms)
+
+
+Started GET "/assets/botright.jpg" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /botright.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/botleft.jpg" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /botleft.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/right.jpg" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /right.jpg - 200 OK (2ms)
+
+
+Started GET "/assets/bt_green_center.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bt_green_center.gif - 200 OK (0ms)
+
+
+Started GET "/assets/bt_green_left.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bt_green_left.gif - 200 OK (0ms)
+
+
+Started GET "/assets/bt_red_r.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bt_red_r.gif - 200 OK (0ms)
+
+
+Started GET "/assets/bt_red_center.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bt_red_center.gif - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar_menu_top.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /sidebar_menu_top.gif - 200 OK (0ms)
+
+
+Started GET "/assets/bt_blue_center.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bt_blue_center.gif - 200 OK (0ms)
+
+
+Started GET "/assets/bt_blue_r.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bt_blue_r.gif - 200 OK (0ms)
+
+
+Started GET "/assets/bt_red_left.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bt_red_left.gif - 200 OK (0ms)
+
+
+Started GET "/assets/menu_bg.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /menu_bg.gif - 200 OK (0ms)
+
+
+Started GET "/assets/comment.png" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /comment.png - 200 OK (0ms)
+
+
+Started GET "/assets/user_logout.png" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /user_logout.png - 200 OK (0ms)
+
+
+Started GET "/assets/bt_blue_left.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bt_blue_left.gif - 200 OK (0ms)
+
+
+Started GET "/assets/bt_green_r.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /bt_green_r.gif - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar_menu_top_a.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /sidebar_menu_top_a.gif - 200 OK (0ms)
+
+
+Started GET "/assets/trans.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /trans.gif - 404 Not Found (15ms)
+=======
 Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
 
 
@@ -63031,10 +63811,90 @@ Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpac
 
 Started GET "/assets/trans.gif" for 127.0.0.1 at 2012-11-23 15:31:33 +0530
 Served asset /trans.gif - 404 Not Found (8ms)
+>>>>>>> 8ee61d3540c1d6d88e52559d72813ab70294a06b
 
 ActionController::RoutingError (No route matches [GET] "/assets/trans.gif"):
   
 
+<<<<<<< HEAD
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2012-11-28 15:02:48 +0530
+Served asset /arrow.gif - 200 OK (23ms)
+
+
+Started GET "/list.html" for 127.0.0.1 at 2012-11-28 15:02:51 +0530
+
+ActionController::RoutingError (No route matches [GET] "/list.html"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/list.html" for 127.0.0.1 at 2012-11-28 15:03:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/list.html"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/new_reg" for 127.0.0.1 at 2012-11-28 15:08:30 +0530
+  Processing by AdminMainPageController#new_reg as HTML
+  [1m[35mLogin Load (1.7ms)[0m  SELECT "logins".* FROM "logins" ORDER BY "logins"."id" DESC LIMIT 1
+  [1m[36mGender Load (1.1ms)[0m  [1mSELECT "genders".* FROM "genders" [0m
+  [1m[35mNationality Load (1.2ms)[0m  SELECT "nationalities".* FROM "nationalities" 
+  [1m[36mRegion Load (1.1ms)[0m  [1mSELECT "regions".* FROM "regions" [0m
+  [1m[35mBloodGroup Load (1.2ms)[0m  SELECT "blood_groups".* FROM "blood_groups" 
+Rendered admin_main_page/new_reg.html.erb within layouts/admin_layout (14.3ms)
+Completed 200 OK in 80ms (Views: 58.2ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 15:08:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/datetimepicker.js?body=1" for 127.0.0.1 at 2012-11-28 15:08:30 +0530
+Served asset /datetimepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin_main_page.css?body=1" for 127.0.0.1 at 2012-11-28 15:08:30 +0530
+Served asset /admin_main_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 15:08:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 15:08:30 +0530
+Served asset /defaults.js - 404 Not Found (13ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 15:08:31 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 15:08:31 +0530
+Served asset /defaults.js - 404 Not Found (8ms)
+=======
 Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
 
 
@@ -63129,10 +63989,57 @@ Served asset /datetimepicker.js - 304 Not Modified (0ms)
 
 Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-23 15:31:51 +0530
 Served asset /defaults.js - 404 Not Found (6ms)
+>>>>>>> 8ee61d3540c1d6d88e52559d72813ab70294a06b
 
 ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
   
 
+<<<<<<< HEAD
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/trans.gif" for 127.0.0.1 at 2012-11-28 15:08:41 +0530
+Served asset /trans.gif - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/trans.gif"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/new_reg" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+  Processing by AdminMainPageController#new_reg as HTML
+  [1m[36mLogin Load (1.8ms)[0m  [1mSELECT "logins".* FROM "logins" ORDER BY "logins"."id" DESC LIMIT 1[0m
+  [1m[35mGender Load (1.1ms)[0m  SELECT "genders".* FROM "genders" 
+  [1m[36mNationality Load (1.2ms)[0m  [1mSELECT "nationalities".* FROM "nationalities" [0m
+  [1m[35mRegion Load (1.2ms)[0m  SELECT "regions".* FROM "regions" 
+  [1m[36mBloodGroup Load (1.2ms)[0m  [1mSELECT "blood_groups".* FROM "blood_groups" [0m
+Rendered admin_main_page/new_reg.html.erb within layouts/admin_layout (14.7ms)
+Completed 200 OK in 43ms (Views: 18.8ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/clockp.js" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /clockp.js - 200 OK (0ms)
+
+
+Started GET "/assets/clockh.js" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /clockh.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.min.js" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /jquery.min.js - 200 OK (0ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+=======
 Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
 
 
@@ -63169,10 +64076,142 @@ Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpac
 
 
 Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-23 15:31:51 +0530
+>>>>>>> 8ee61d3540c1d6d88e52559d72813ab70294a06b
 
 ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
   
 
+<<<<<<< HEAD
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/niceforms-default.css" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /niceforms-default.css - 200 OK (0ms)
+
+
+Started GET "/assets/jconfirmaction.jquery.js" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /jconfirmaction.jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/ddaccordion.js" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /ddaccordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin_main_page.css?body=1" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /admin_main_page.css - 200 OK (0ms)
+
+
+Started GET "/assets/datetimepicker.js?body=1" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /datetimepicker.js - 200 OK (3ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /defaults.js - 404 Not Found (13ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.gif" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /logo.gif - 200 OK (0ms)
+
+
+Started GET "/assets/search.png" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /search.png - 200 OK (0ms)
+
+
+Started GET "/assets/defaults.js" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /defaults.js - 404 Not Found (11ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/defaults.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/user_logout.png" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /user_logout.png - 200 OK (0ms)
+
+
+Started GET "/assets/menu_bg.jpg" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /menu_bg.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/menu_bg.gif" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /menu_bg.gif - 200 OK (0ms)
+
+
+Started GET "/assets/comment.png" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /comment.png - 200 OK (0ms)
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /bg.jpg - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar_menu_top.gif" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /sidebar_menu_top.gif - 200 OK (0ms)
+
+
+Started GET "/assets/cal.gif" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /cal.gif - 200 OK (20ms)
+
+
+Started GET "/assets/indeziner_logo.gif" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /indeziner_logo.gif - 200 OK (0ms)
+
+
+Started GET "/assets/footer_bg.jpg" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /footer_bg.jpg - 200 OK (55ms)
+
+
+Started GET "/assets/minus.gif" for 127.0.0.1 at 2012-11-28 15:11:30 +0530
+Served asset /minus.gif - 200 OK (0ms)
+
+
+Started GET "/assets/sidebar_menu_top_a.gif" for 127.0.0.1 at 2012-11-28 15:11:31 +0530
+Served asset /sidebar_menu_top_a.gif - 200 OK (0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2012-11-28 15:11:33 +0530
+  Processing by AdminMainPageController#home as HTML
+  [1m[35mLogin Load (1.1ms)[0m  SELECT "logins".* FROM "logins" ORDER BY username
+Rendered admin_main_page/home.html.erb within layouts/admin_layout (8.0ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-11-28 15:11:33 +0530
+
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/assets/admin_main_page.css?body=1" for 127.0.0.1 at 2012-11-28 15:11:33 +0530
+Served asset /admin_main_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 15:11:33 +0530
+
+ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-28 15:11:33 +0530
+=======
 Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
 
 
@@ -63307,10 +64346,22 @@ Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpac
 
 
 Started GET "/niceforms.js" for 127.0.0.1 at 2012-11-23 15:35:26 +0530
+>>>>>>> 8ee61d3540c1d6d88e52559d72813ab70294a06b
 
 ActionController::RoutingError (No route matches [GET] "/niceforms.js"):
   
 
+<<<<<<< HEAD
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/salary" for 127.0.0.1 at 2012-11-28 15:11:36 +0530
+
+ActionController::RoutingError (No route matches [GET] "/salary"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+=======
 Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
 
 
@@ -78105,6 +79156,7 @@ Served asset /bg.jpg - 304 Not Modified (0ms)
 
 Started GET "/assets/sidebar_menu_top_a.gif" for 127.0.0.1 at 2012-11-23 19:29:25 +0530
 Served asset /sidebar_menu_top_a.gif - 304 Not Modified (0ms)
+<<<<<<< HEAD
 
 
 Started GET "/assets/trans.gif" for 127.0.0.1 at 2012-11-23 19:33:48 +0530
@@ -98179,3 +99231,6 @@ ActionController::RoutingError (No route matches [GET] "/assets/trans.gif"):
   
 
 Rendered /home/prakashm/.rvm/gems/ruby-1.9.2-p320@business_rails3/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+=======
+>>>>>>> 8ee61d3540c1d6d88e52559d72813ab70294a06b
+>>>>>>> c87fc3bf860045d4e40f9b881738ee911fe315ae

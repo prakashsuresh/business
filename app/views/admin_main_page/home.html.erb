@@ -28,7 +28,8 @@
         <% count=0%>
         <% for each_id in @list %>
     	<tr>
-        	<td><input type="checkbox" name="" /></td>
+            <td><%=radio_button :employee_detail ,:id ,:value=>each_id.id %></td>
+        	
             <td><%= count +=1%></td>
             <td><%=each_id.username%></td>
             <td colspan='2'><%=each_id.email%></td>
