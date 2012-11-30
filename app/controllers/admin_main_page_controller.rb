@@ -24,7 +24,7 @@ class AdminMainPageController < ApplicationController
 		
 	end
 
-	end
+	
 
 	def save
 		@login=Login.new(params[:employee_detail])
