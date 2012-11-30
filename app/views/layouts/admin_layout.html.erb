@@ -33,14 +33,28 @@ ddaccordion.init({
 
 <script type="text/javascript" src="/assets/jconfirmaction.jquery.js"></script>
 <script type="text/javascript">
-	
-	$(document).ready(function() {
-		$('.ask').jConfirmAction();
-	});
-	
+
+$(function() {
+   //$("#new_regis").hide();
+    //$("#bbb").hide(); 
+   $("#manage").click(function () {
+    $('#bbb').show();
+    $("#aaa").hide();
+    return false;
+    });
+   $("#ad_home").click(function () {
+    $('#aaa').show();
+    $("#bbb").hide();
+    return false;
+    });
+
+
+});
+
+
 </script>
 
-<script language="javascript" type="text/javascript" src="niceforms.js"></script>
+<script type="text/javascript" src="niceforms.js"></script>
 <link rel="stylesheet" type="text/css" media="all" href="/assets/niceforms-default.css" />
   <%= stylesheet_link_tag "admin_main_page" %>
 </head>
@@ -58,6 +72,12 @@ ddaccordion.init({
     
                     <div class="menu">
                     <ul>
+
+                    <li><a id="ad_home" class="current" href="#">Admin Home</a></li>
+                    <li><a id="manage" href="#">Manage Categories<!--[if IE 7]><!--></a><!--<![endif]-->
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                       
+
                     <li><a class="current" href="home">Admin Home</a></li>
                     <li><a href="salary">Manage Categories<!--[if IE 7]><!--></a><!--<![endif]-->
                     <!--[if lte IE 6]><table><tr><td><![endif]-->
@@ -68,6 +88,7 @@ ddaccordion.init({
                         <li><a href="" title="">Lorem ipsum dolor sit amet</a></li>
                         <li><a href="" title="">Lorem ipsum dolor sit amet</a></li>
                         </ul>-->
+
                     <!--[if lte IE 6]></td></tr></table></a><![endif]-->
                     </li>
                     <li><a href="login.html">Manage Users<!--[if IE 7]><!--></a><!--<![endif]-->
@@ -188,16 +209,38 @@ ddaccordion.init({
             </form>            
             </div>
     
-            <div class="sidebarmenu">
+            <div id = "aaa" class="sidebarmenu">
             
+
+                <a class="menuitem submenuheader" href="">Subcategories </a>
+                <div   class="submenu">
+                    <ul id ="new_regis">
+
                 <a class="menuitem submenuheader" href="">Registration </a>
                 <div class="submenu">
                     <ul>
+
                     <li><a href="new_reg">New Registration</a></li>
                     <li><a href="update">Update Details</a></li>
                     <li><a href="list_of_emp">List of Employees </a></li>
-                     </ul>
+                    </ul>
                 </div>
+                       
+            </div>
+            <div  id = "bbb" class="sidebarmenu">
+            
+                <a class="menuitem submenuheader" href="">Subcategories </a>
+               
+             
+                 <div class="submenu">
+                    <ul id ="new_submenu">
+                    <li><a href="new_reg">salary </a></li>
+                    <li><a href="#">xxxxxxxxxx </a></li>
+                    <li><a href="#">yyyyyyyyyyyyy </a></li>
+                    </ul>
+                </div>
+                
+
                     
             </div>
             
