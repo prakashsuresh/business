@@ -27,6 +27,7 @@ class AdminMainPageController < ApplicationController
 	
 
 	def save
+		
 		@login=Login.new(params[:employee_detail])
 		
 		bank_status=Bank.create_bank_account(params[:employee_detail])

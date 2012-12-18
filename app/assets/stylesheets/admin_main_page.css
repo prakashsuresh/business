@@ -457,3 +457,10 @@ margin-right: 2px;
 border: 1px solid #f3f3f3;
 color: #ccc;
 }
+
+.field_set{
+    border-color:#FFFFFF;
+      padding: 2px;
+  border: 1px solid green;
+}
+

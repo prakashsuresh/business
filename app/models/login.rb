@@ -4,5 +4,15 @@ class Login < ActiveRecord::Base
 	belongs_to :nationality
 	belongs_to :blood_group
 	belongs_to :region
+	belongs_to :salary
 	#error_messages_for '@employee_detail'
+
+	has_attached_file :photo,
+	 :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+               :url => "/system/:attachment/:id/:style/:filename", 
+    :styles => {
+      :thumb => "75x75#",
+      :small => "100x100#",
+      :medium => "400x400>"
+    }
 end

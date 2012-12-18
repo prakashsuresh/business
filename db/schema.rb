@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121123100725) do
+ActiveRecord::Schema.define(:version => 20121218072657) do
 
   create_table "banks", :force => true do |t|
     t.integer  "acc_no"
@@ -52,6 +52,10 @@ ActiveRecord::Schema.define(:version => 20121123100725) do
     t.integer  "blood_group_id"
     t.integer  "region_id"
     t.integer  "nationality_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "nationalities", :force => true do |t|
@@ -64,6 +68,25 @@ ActiveRecord::Schema.define(:version => 20121123100725) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "salaries", :force => true do |t|
+    t.integer  "login_id"
+    t.date     "salary_date"
+    t.float    "working_days"
+    t.float    "present_days"
+    t.float    "absent_days"
+    t.float    "basic"
+    t.float    "hr"
+    t.float    "conveyance"
+    t.float    "da"
+    t.float    "ma"
+    t.float    "other"
+    t.float    "grosspay"
+    t.float    "pf"
+    t.float    "net_pay"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
