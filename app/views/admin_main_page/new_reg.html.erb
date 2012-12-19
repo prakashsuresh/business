@@ -1,18 +1,29 @@
+
+<% if @login.errors.any? %>
+    hgjhg
+      <h2><%= pluralize(@login.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @login.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+   
+  <% end %>
  <div class="right_content"> 
  	<%= javascript_include_tag "datetimepicker" %>
 	    <%= javascript_include_tag :defaults %>
 <center>
-
-	           
+          
 	           <%= form_for  @login, :url => { :action => "save" } do |f| %> 
-			     <table width="550" height = "400" border="0">
+	           <table width="550" height = "400" border="0">
 			    <tr>
 					<td colspan="2" style="background-color:#ADDFFF;">
 					  <h1><center>Employee Personal Details</center></h1>
 					</td>
 				</tr>
       			<tr valign="top">
-					<td style="background-color:#eeeeee;width:100px;text-align:top;">
+				<td style="background-color:#eeeeee;width:100px;text-align:top;">
 					<%=f.label :Emp_Id%><br/>
 					<%=f.text_field :emp_id, :value=>@inc_val,:readonly=>true%><br/>
 					<%=f.label :Emp_Name%><br/>
@@ -30,7 +41,7 @@
 					<%=f.text_field :phone_no%><br/>
 					<%=f.label :Email%><br/>
 					<%=f.text_field :email%><br/>
-					<%=f.label :Password%><br/>>
+					<%=f.label :Password%><br/>
 					<%=f.text_field :password %><br/>
 				</td>
 				<td style="background-color:#eeeeee;height:400px;width:10000px;text-align:top;">
@@ -48,7 +59,7 @@
 					<%@accno=Time.new%>
 					<%@accno=@accno.strftime("%d%m%y")%>
 					<%@accno=@accno.to_s%>
-					<%@incrementid=@incrementid.to_s%>
+					<%@incrementid=@inc_val.to_s%>
 					<%@accnoincrementid=@accno+@incrementid%>
 					<%=f.label :bank_acc_no%><br/>
 					<%=f.text_field :bank_acc_no,:value=>@accnoincrementid%><br/>
@@ -56,12 +67,11 @@
 					<%=f.file_field :resume %><br/>
 					<br>
 					<br><%=f.label :photo%><br/>
-					<%=f.file_field :photo %><br/>
+					<%=f.file_field :photo%><br/>
 					<br>
 				</td><br/>
 			</tr>
 			<tr>
-		
 			<tr>
 				<td colspan="2" style="background-color:#ADDFFF;text-align:center;">
 				<%=submit_tag "create" %>

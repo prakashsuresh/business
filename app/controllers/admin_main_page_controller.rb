@@ -8,7 +8,7 @@ class AdminMainPageController < ApplicationController
 	end
 
 	def new_reg
-
+raise params.inspect
 
 	
 		@d= Date.today
@@ -16,7 +16,7 @@ class AdminMainPageController < ApplicationController
        	@inc_val = @emp_id.emp_id + 1      
 		@gender=Gender.find(:all)
 		@employee_detail = Login.new
-		@login = params[:employee_detail].blank? ? Login.new : Login.new
+		@login =Login.new
 		@nationlities=Nationality.find(:all)
 		@region=Region.find(:all)
 		@blood_group=BloodGroup.find(:all)
@@ -27,14 +27,13 @@ class AdminMainPageController < ApplicationController
 	
 
 	def save
-		
 		@login=Login.new(params[:login])
-		
-		@login.save!
-		if (@login.save)
+		status=@login.save
+		if status
 		   redirect_to :controller=>'/admin_main_page', :action => 'new_reg'
 		else
-		   redirect_to :controller=>'/admin_main_page', :action => 'new_reg'
+			
+		   redirect_to  :action => 'new_reg'
 		end
 
 	end

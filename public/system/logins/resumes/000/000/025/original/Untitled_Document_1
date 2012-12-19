@@ -1,0 +1,72 @@
+def ip_pending_advance(params)
+    av=AdvanceVisit.find(:all,:conditions=>["date(created_at)<=? and collection_type=? and advance_type=?",params[:date].to_date,'Payment','IP'],:order =>'patient_id')
+    advance_pending={}
+    advance_bills={}
+    amt = 0.0
+    ip_unbill =[]
+    ip_advance_pendings={}
+     ip_advance_pending={}
+     ip_advance_bills={}
+    av.each do |a|
+      
+      ip_advance_pendings[a.id]=a
+     
+      aur=AdvanceVisitsBill.find(:all,:conditions=>["date(created_at)<=? and advance_visit_id=?",params[:date].to_date,a.id],:order =>'advance_visit_id')
+      if !aur.blank?
+        aur.each do |each_bill|
+          if  ip_advance_bills.has_key?(a.id) 
+            used_amt= ip_advance_bills[a.id]
+            ip_advance_bills[a.id]=used_amt.to_f+each_bill.used_amount.to_f
+          else
+            ip_advance_bills[a.id]=each_bill.used_amount.to_f
+          end
+        end
+      else
+        adv_bill=AdvanceVisit.find(:all,:conditions =>['date(created_at)<=? and id =? and advance_type=?',params[:date].to_date,a.id,'IP'])
+        @only_adv_ip=[]
+        adv_bill.each do |each_adv_bill|
+          @only_adv_ip << AdvanceVisitsBill.find(:all,:conditions=>["date(created_at)<=? and advance_visit_id=?",params[:date].to_date,each_adv_bill.id])
+        end
+        @only_adv_ip.flatten!
+        if @only_adv_ip.blank?
+          ip_unbill << a.id
+        end
+      end
+  end
+    balance =[]
+    ip_advance_pendings.sort.each do |total_bill|
+      ip_advance_bills.sort.each do |used_bill|
+        if total_bill[0] == used_bill[0]  
+          refunded_amount =cal_refund(params[:date].to_date,total_bill[0])
+          if !refunded_amount.blank?
+            amt = total_bill[1].amount.to_f - used_bill[1].to_f - refunded_amount.to_f
+            pati_id = total_bill[0].to_s
+            balance << pati_id.to_s + ',' + amt.to_f.to_s
+          else
+            amt = total_bill[1].amount.to_f - used_bill[1].to_f
+            pati_id = total_bill[0].to_s
+            balance << pati_id.to_s + ',' + amt.to_f.to_s
+          end
+          
+        end
+      end
+    end
+    ip_advance_pending.sort.each do |total_bill|
+      ip_unbill.sort.each do |new|
+        if total_bill[0] == new
+          refunded_amount =cal_refund(params[:date].to_date,new)
+          if !refunded_amount.blank?
+            pati_id=total_bill[0]
+            amt = total_bill[1].amount.to_f  - refunded_amount.to_f
+            balance <<  pati_id.to_s + ',' + amt.to_f.to_s
+          else
+            pati_id=total_bill[0]
+            amt = total_bill[1].amount.to_f  
+            balance <<  pati_id.to_s + ',' + amt.to_f.to_s
+          end
+        end
+      end
+    end
+
+    return balance.uniq
+  end

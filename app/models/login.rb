@@ -15,4 +15,12 @@ class Login < ActiveRecord::Base
       :small => "100x100#",
       :medium => "400x400>"
     }
+
+    has_attached_file :resume
+    
+	before_create :create_bank_account
+    
+     def create_bank_account
+      	status=Bank.create_new_account(self) 
+     end
 end
