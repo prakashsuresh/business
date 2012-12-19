@@ -28,10 +28,10 @@ class AdminMainPageController < ApplicationController
 
 	def save
 		
-		@login=Login.new(params[:employee_detail])
+		@login=Login.new(params[:login])
 		
-		bank_status=Bank.create_bank_account(params[:employee_detail])
-		if (@login.save && bank_status)
+		@login.save!
+		if (@login.save)
 		   redirect_to :controller=>'/admin_main_page', :action => 'new_reg'
 		else
 		   redirect_to :controller=>'/admin_main_page', :action => 'new_reg'
