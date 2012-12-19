@@ -5,12 +5,12 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: business_db
+  database: business_new
   #pool: 5
   #timeout: 5000
   username: postgres
-  password: srishti
-  host: 192.168.4.136
+  password: prakash
+  host: localhost
   port: 5432
 
 # Warning: The database defined as "test" will be erased and
