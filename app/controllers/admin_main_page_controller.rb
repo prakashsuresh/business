@@ -16,7 +16,7 @@ class AdminMainPageController < ApplicationController
        	@inc_val = @emp_id.emp_id + 1      
 		@gender=Gender.find(:all)
 		@employee_detail = Login.new
-		@login = params[:employee_detail].blank? ? Login.new : Login.new(params[:employee_detail])
+		@login = params[:employee_detail].blank? ? Login.new : Login.new
 		@nationlities=Nationality.find(:all)
 		@region=Region.find(:all)
 		@blood_group=BloodGroup.find(:all)
