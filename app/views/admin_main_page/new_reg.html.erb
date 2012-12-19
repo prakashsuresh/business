@@ -11,53 +11,52 @@
 					  <h1><center>Employee Personal Details</center></h1>
 					</td>
 				</tr>
-       <%= f.text_field :username %>
-				<tr valign="top">
+      			<tr valign="top">
 					<td style="background-color:#eeeeee;width:100px;text-align:top;">
-					<label>Emp ID</label><br/>
-					<%=text_field 'employee_detail', "emp_id", :value=>@inc_val,:readonly=>true%><br/>
-					<label>Emp Name</label><br/>
-					<%=text_field "employee_detail","username",:class => 'display_caps'%><br/>
-					<label>Emp Roll</label><br/>
-					<%=select "employee_detail","employee_type",{"SoftwareEngineer"=>"SoftwareEngineer","Testing"=>"Testing","Migration"=>"Migration","softwareDeveloper"=>"softwareDeveloper","SysAdmin"=>"SysAdmin","HR"=>"HR","Other"=>"Other"}, {:prompt=>"--Select--"} %><br/>
-					<label>Date Of Birth</label><br/>
-					<%=text_field "employee_detail","dob", :id=>'demo1',:size=>15%>
+					<%=f.label :Emp_Id%><br/>
+					<%=f.text_field :emp_id, :value=>@inc_val,:readonly=>true%><br/>
+					<%=f.label :Emp_Name%><br/>
+					<%=f.text_field  :username ,:class => 'display_caps'%><br/>
+					<%=f.label :Emp_Roll%><br/>
+					<%=f.select :employee_type,{"SoftwareEngineer"=>"SoftwareEngineer","Testing"=>"Testing","Migration"=>"Migration","softwareDeveloper"=>"softwareDeveloper","SysAdmin"=>"SysAdmin","HR"=>"HR","Other"=>"Other"}, {:prompt=>"--Select--"} %><br/>
+						<%=f.label :Date_of_birth%><br/>
+					<%=f.text_field :dob, :id=>'demo1',:size=>15%>
 					<a href="javascript:NewCal('demo1','ddmmyyyy')">
 					<img src="assets/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a>
 					<br/>
-					<label>Address</label><br/>
-					<%=text_field "employee_detail","adress"%><br/>
-					<label>PhoneNo</label><br/>
-					<%=text_field "employee_detail","phone_no"%><br/>
-					<label>Email</label><br/>
-					<%=text_field "employee_detail","email"%><br/>
-					<label>Emp password</label><br/>
-					<%=text_field "employee_detail","password"%><br/>
+					<%=f.label :Address%><br/>
+					<%=f.text_field :adress%><br/>
+					<%=f.label :phone_no%><br/>
+					<%=f.text_field :phone_no%><br/>
+					<%=f.label :Email%><br/>
+					<%=f.text_field :email%><br/>
+					<%=f.label :Password%><br/>>
+					<%=f.text_field :password %><br/>
 				</td>
 				<td style="background-color:#eeeeee;height:400px;width:10000px;text-align:top;">
-					<label>Gender</label>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label>Blood Group</label><br/>
-					<%= collection_select 'employee_detail', 'gender_id', @gender, 'id', 'name',{:prompt=>"--Select--"} %>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;  
-					<%= collection_select 'employee_detail', 'blood_group_id', @blood_group, 'id', 'name', {:prompt=>"--Select--"}%><br/>
-     				 <label>Region</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Nationality</label><br/>
-     				<%= collection_select 'employee_detail', 'region_id', @region, 'id', 'name' ,{:prompt=>"--Select--"}%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<%= collection_select 'employee_detail', 'nationality_id', @nationlities, 'id', 'name',{:prompt=>"--Select--"} %>
+					<%=f.label :Gender%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=f.label :blood_group%><br/>
+					<%=f.collection_select :gender_id, @gender, 'id', 'name',{:prompt=>"--Select--"} %>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;  
+					<%=f.collection_select :blood_group_id, @blood_group, 'id', 'name', {:prompt=>"--Select--"}%><br/>
+     				<%=f.label :region%> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<%=f.label :nationlity%><br/>
+     				<%=f.collection_select :region_id, @region, 'id', 'name' ,{:prompt=>"--Select--"}%>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<%=f.collection_select :nationality_id, @nationlities, 'id', 'name',{:prompt=>"--Select--"} %>
 					<br/>
-					<label>Start_date</label><br/>
-					<%=text_field "employee_detail","admission_date", :value=>@d,:readonly=>true%><br/>
-					<label>Basic Salary</label><br/>
-					<%=text_field "employee_detail","basic_salary"%><br/>
+					<%=f.label :start_date%><br/>
+					<%=f.text_field :admission_date, :value=>@d,:readonly=>true%><br/>
+					<%=f.label :basic_salary%><br/>
+					<%=f.text_field :basic_salary%><br/>
 					<%@accno=Time.new%>
 					<%@accno=@accno.strftime("%d%m%y")%>
 					<%@accno=@accno.to_s%>
 					<%@incrementid=@incrementid.to_s%>
 					<%@accnoincrementid=@accno+@incrementid%>
-					<label>BankAccNo</label><br/>
-					<%=text_field "employee_detail","bank_acc_no",:value=>@accnoincrementid%><br/>
-					<br><label>Resume   </label><br/>
-					<%= file_field 'employee_detail', 'resume' %><br/>
+					<%=f.label :bank_acc_no%><br/>
+					<%=f.text_field :bank_acc_no,:value=>@accnoincrementid%><br/>
+					<br><%=f.label :resume%><br/>
+					<%=f.file_field :resume %><br/>
 					<br>
-					<br><label>Photo   </label><br/>
-					<%= file_field 'employee_detail', 'photo' %><br/>
+					<br><%=f.label :photo%><br/>
+					<%=f.file_field :photo %><br/>
 					<br>
 				</td><br/>
 			</tr>
