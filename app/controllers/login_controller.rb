@@ -32,6 +32,22 @@ class LoginController < ApplicationController
     	#raise params.inspect
     end
 
+    def get_password
+        @login = Login.new
+        render :layout => false
+    end
+
+
+    def forgot_password
+       @email =  Login.where('email =?',params[:login][:email]).first
+       if @email
+         redirect_to(get_password_url,:notice => 'Your password has been sent to your mail')
+        else
+        raise params.inspect
+       end
+    end
+
+
   
 
 end

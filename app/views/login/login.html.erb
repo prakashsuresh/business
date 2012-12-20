@@ -1,4 +1,5 @@
-  
+  <%= stylesheet_link_tag 'lightwindow' %>
+  <%= javascript_include_tag "lightwindow" ,"scriptaculous" , "prototype" %>
       <%=form_tag :action => 'goto_login' do %>
       <div id="login">
         <div id="logintxtblank">
@@ -28,11 +29,18 @@
 
           <div id="loginbutton"> <%= submit_tag 'Login', :class=>"buttons", :id => 'goto_login'%></div>
             <!--<a href="main_menu" class="login">login</a>-->
-          <div id="member">Not yet a Member? </div>
-          <div id="register"><a href="#" class="register">Register Now</a></div>
+          <div id="member">
+            <a   class="register" onclick = "myLightWindow.activateWindow({ href:'get_password',
+                    title: 'Getting Password ',
+                    width: '500px', 
+                    height: '200px',
+                    caption: ''
+                    });">Forgot Password</a> 
+          </div>
+          
           <div id="error_message"> <% if notice %><%= notice %></div>
       <% end %>
         </div>
       </div>
 <%end%>
-      
+

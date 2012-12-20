@@ -65,6 +65,10 @@ Business::Application.routes.draw do
      match '/save_salary', :to=>'salary#save_salary'
      match '/delete', :to =>'admin_main_page#delete'
 
+     match '/get_password', :to=>'login#get_password'
+     match '/forgot_password', :to=>'login#forgot_password'
+
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
