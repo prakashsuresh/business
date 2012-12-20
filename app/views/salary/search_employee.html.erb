@@ -1,7 +1,8 @@
 <div class="right_content">  
-<fieldset  class="field_set">
-<table>
-	<%= form_tag :action => 'save_salary',:id=>'form_salary_detail' do  %>
+
+  <table width="550" height = "500" border="0">
+  	<fieldset  class="field_set">
+  	<%= form_tag :action => 'save_salary',:id=>'form_salary_detail' do  %>
 	
 		<legend>Salary Detail</legend>
 		<%= fields_for :salary, @client do |s| %>
@@ -10,8 +11,9 @@
 		<input type="button" value="Print" onclick="window.print()" />
 		<%end%>
 <%end%>
-</table>
 </fieldset>
+</table>
+
 </div>
 <script type="text/javascript">
 function new_value()

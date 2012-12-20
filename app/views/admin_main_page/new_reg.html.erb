@@ -1,6 +1,8 @@
 
+ <div class="right_content"> 
+
 <% if @login.errors.any? %>
-  
+  <div class="font_color">
       <h2><%= pluralize(@login.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul>
@@ -8,9 +10,8 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-   
+   </div>
   <% end %>
- <div class="right_content"> 
  	<%= javascript_include_tag "datetimepicker" %>
 	    <%= javascript_include_tag :defaults %>
 <center>

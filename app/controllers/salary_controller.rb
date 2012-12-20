@@ -2,7 +2,7 @@ class SalaryController < ApplicationController
 layout "admin_layout"
 
 	def search_employee
-	
+		session[:selected_tab] = "categories"
 	end
 
 	def save_salary

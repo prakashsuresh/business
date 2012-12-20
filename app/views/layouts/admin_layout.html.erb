@@ -48,9 +48,14 @@ $(function() {
     $('#aaa').show();
     $("#bbb").hide();
    
+   
     });
 
-
+<% if session[:selected_tab].blank? || session[:selected_tab]=="home" %>
+$("#ad_home").click();
+<%else%>
+$("#manage").click()
+<% end %>
 });
 
 
