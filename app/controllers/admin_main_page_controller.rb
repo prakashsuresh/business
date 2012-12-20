@@ -8,7 +8,7 @@ class AdminMainPageController < ApplicationController
 	end
 
 	def new_reg
-raise params.inspect
+
 
 	
 		@d= Date.today

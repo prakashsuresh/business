@@ -30023,3 +30023,186 @@ Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320@busines/gems/actionpack-3.1.
 Started GET "/assets/sidebar_menu_top_a.gif" for 127.0.0.1 at 2012-12-19 16:16:54 +0530
 Served asset /sidebar_menu_top_a.gif - 304 Not Modified (0ms)
 >>>>>>> ab1fd3377d67ab4dc6e3b2e66a819713e420d2dd
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-20 09:58:01 +0530
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/login_layout (37.3ms)
+Cache for Asset (application.js) is stale
+/home/prakashm/.rvm/gems/ruby-1.9.2-p320/gems/jquery-rails-2.1.3/vendor/assets/javascripts/jquery.js isn't in paths: /home/jayprakash/work/rails3/business/app/assets/images, /home/jayprakash/work/rails3/business/app/assets/javascripts, /home/jayprakash/work/rails3/business/app/assets/stylesheets, /home/jayprakash/work/rails3/business/vendor/assets/stylesheets, /home/jayprakash/.rvm/gems/ruby-1.9.2-p320@business_1/gems/jquery-rails-2.1.3/vendor/assets/javascripts
+Compiled application.js  (30ms)  (pid 3694)
+Compiled jquery.js  (6ms)  (pid 3694)
+Compiled jquery_ujs.js  (0ms)  (pid 3694)
+Completed 200 OK in 559ms (Views: 558.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+
+Rendered /home/jayprakash/.rvm/gems/ruby-1.9.2-p320@business_1/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jquery.js - 200 OK (22ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jquery_ujs.js - 200 OK (13ms)
+
+
+Started GET "/assets/clockh.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /clockh.js - 200 OK (8ms)
+
+
+Started GET "/assets/ParseMaster.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /ParseMaster.js - 200 OK (13ms)
+
+
+Started GET "/assets/admin_main_page.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /admin_main_page.js - 200 OK (14ms)
+
+
+Started GET "/assets/bank.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /bank.js - 200 OK (17ms)
+
+
+Started GET "/assets/clockp.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /clockp.js - 200 OK (17ms)
+
+
+Started GET "/assets/datetimepicker.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /datetimepicker.js - 200 OK (12ms)
+
+
+Started GET "/assets/ddaccordion.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /ddaccordion.js - 200 OK (15ms)
+
+
+Started GET "/assets/jconfirmaction.jquery.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jconfirmaction.jquery.js - 200 OK (17ms)
+
+
+Started GET "/assets/jquery-1.4.2.min.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jquery-1.4.2.min.js - 200 OK (16ms)
+
+
+Started GET "/assets/jquery-latest.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jquery-latest.js - 200 OK (19ms)
+
+
+Started GET "/assets/jquery.min.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jquery.min.js - 200 OK (51ms)
+
+
+Started GET "/assets/jquery.metadata.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jquery.metadata.js - 200 OK (11ms)
+
+
+Started GET "/assets/jquery.tablesorter.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jquery.tablesorter.js - 200 OK (17ms)
+
+
+Started GET "/assets/jquery.tablesorter.pager.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jquery.tablesorter.pager.js - 200 OK (24ms)
+
+
+Started GET "/assets/jquery.tablesorter.min.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jquery.tablesorter.min.js - 200 OK (12ms)
+
+
+Started GET "/assets/jsmin.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /jsmin.js - 200 OK (11ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /login.js - 200 OK (16ms)
+
+
+Started GET "/assets/min.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /min.js - 200 OK (11ms)
+
+
+Started GET "/assets/main_page.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /main_page.js - 200 OK (28ms)
+
+
+Started GET "/assets/niceforms.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /niceforms.js - 200 OK (19ms)
+
+
+Started GET "/assets/pack.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /pack.js - 200 OK (21ms)
+
+
+Started GET "/assets/salary.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /salary.js - 200 OK (17ms)
+
+
+Started GET "/assets/packer.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /packer.js - 200 OK (21ms)
+
+
+Started GET "/assets/writeFile.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /writeFile.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/assets/login_style.css?body=1" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /login_style.css - 200 OK (0ms)
+
+
+Started GET "/assets/icon.ico" for 127.0.0.1 at 2012-12-20 09:58:03 +0530
+Served asset /icon.ico - 200 OK (23ms)
+
+
+Started GET "/assets/header.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /header.jpg - 200 OK (76ms)
+
+
+Started GET "/assets/lefttxtbg.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /lefttxtbg.jpg - 200 OK (108ms)
+
+
+Started GET "/assets/headerbg.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /headerbg.jpg - 200 OK (28ms)
+
+
+Started GET "/assets/menu.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /menu.jpg - 200 OK (19ms)
+
+
+Started GET "/assets/leftnavactive.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /leftnavactive.jpg - 200 OK (73ms)
+
+
+Started GET "/assets/lefticon.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /lefticon.jpg - 200 OK (13ms)
+
+
+Started GET "/assets/loginbg.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /loginbg.jpg - 200 OK (17ms)
+
+
+Started GET "/assets/footerbg.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /footerbg.jpg - 200 OK (19ms)
+
+
+Started GET "/assets/footer.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /footer.jpg - 200 OK (13ms)
+
+
+Started GET "/assets/footerbox.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /footerbox.jpg - 200 OK (21ms)
+
+
+Started GET "/assets/footerbutton.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /footerbutton.jpg - 200 OK (33ms)
+
+
+Started GET "/assets/xhtml.jpg" for 127.0.0.1 at 2012-12-20 09:58:04 +0530
+Served asset /xhtml.jpg - 200 OK (30ms)
