@@ -1,1 +1,5 @@
-rvm use 1.9.2@bus
+<<<<<<< HEAD
+rvm use 1.9.2@business_1
+=======
+rvm use 1.9.2@buss
+>>>>>>> 0d73300f0dc69b55241c560551b80a94422bf669

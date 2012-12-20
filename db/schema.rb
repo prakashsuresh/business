@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218072657) do
+ActiveRecord::Schema.define(:version => 20121219100905) do
 
   create_table "banks", :force => true do |t|
     t.integer  "acc_no"
     t.string   "name"
-    t.float    "balance"
+    t.float    "balance",    :default => 0.0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -42,12 +42,11 @@ ActiveRecord::Schema.define(:version => 20121218072657) do
     t.string   "employee_type"
     t.integer  "emp_id"
     t.string   "adress"
-    t.integer  "phone_no"
+    t.string   "phone_no",            :limit => 50
     t.date     "dob"
     t.date     "admission_date"
     t.integer  "basic_salary"
     t.integer  "bank_acc_no"
-    t.string   "resume"
     t.integer  "gender_id"
     t.integer  "blood_group_id"
     t.integer  "region_id"
@@ -56,6 +55,10 @@ ActiveRecord::Schema.define(:version => 20121218072657) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
   end
 
   create_table "nationalities", :force => true do |t|

@@ -48,10 +48,15 @@ $(function() {
     $('#aaa').show();
     $("#bbb").hide();
    
+   
     });
     $("#rounded-corner").tablesorter(); 
 
-
+<% if session[:selected_tab].blank? || session[:selected_tab]=="home" %>
+$("#ad_home").click();
+<%else%>
+$("#manage").click()
+<% end %>
 });
 
 

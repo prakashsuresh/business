@@ -2,31 +2,32 @@
 <div class="right_content">                    
 
 
-    <h2>LIST OF EMPLOYEES</h2> 
+   <center> <h2>LIST OF EMPLOYEES</h2> </center>
                     
                     
-<table id="rounded-corner" summary="2007 Major IT Companies' Profit">
+<table id="rounded-corner" class="tablesorter" summary="2007 Major IT Companies' Profit">
     <thead>
     	<tr><th></th>
         	<th scope="col" class="rounded">Employee Id</th>
-            <th scope="col" class="rounded">Name</th>
-            <th scope="col" class="rounded">Email ID<th>
+            <th scope="col" class="rounded" >Name</th>
+           
+            <th scope="col" class="rounded" >Email ID<th>
             <th scope="col" class="rounded">Employee Type</th>
             <th scope="col" class="rounded">Edit</th>
             <th scope="col" class="rounded-q4">Delete</th>
         </tr>
     </thead>
-        <tfoot>
+     <!--   <tfoot>
     	<tr>
         	<td class="rounded-foot-right">&nbsp;</td>
         </tr>
-    </tfoot>
+    </tfoot>-->
     
     <tbody>
         <% count=0%>
         <% for each_id in @list_of_emp %>
     	<tr>
-            <td><input type="checkbox" name="" /></td>
+            <td><%= radio_button("user", "id", :value=>each_id.id) %> </td>
         	<td><%=each_id.id%></td>
             <td colspan='2'><%=each_id.username%></td>
             <td><%=each_id.email%></td>
@@ -38,9 +39,12 @@
     </tbody>
 </table>
 
-	   
-     
-        <div class="pagination">
+
+<%= will_paginate @list_of_emp%>
+
+<!--<div class="pagination">
+>>>>>>> f28028e668fca0f8503e94395301fec2a0439467
         <span class="disabled"> prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">10</a><a href="">11</a><a href="">12</a>...<a href="">100</a><a href="">101</a><a href="">next >></a>
         </div> 
-    </html> 
+    </html>-->
+    </div>

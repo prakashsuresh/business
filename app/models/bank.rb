@@ -1,10 +1,10 @@
 class Bank < ActiveRecord::Base
-
-	def self.create_bank_account(params)
-
-		bank_account=Bank.new(:acc_no =>params[:bank_acc_no],:name=>params[:username],:balance=>0.0)
-		bank_status=bank_account.save
-		#return bank_status
-
+	validates :acc_no,:name, :presence => true, :uniqueness => true
+	
+	def self.create_new_account(bank_detail)
+		status=true
+		@bank=self.new(:name =>bank_detail.username, :acc_no=>bank_detail.bank_acc_no)
+		status=@bank.save
+		return status
 	end
 end

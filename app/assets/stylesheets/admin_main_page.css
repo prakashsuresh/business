@@ -463,4 +463,6 @@ color: #ccc;
       padding: 2px;
   border: 1px solid green;
 }
-
+.font_color{
+	color:red;
+}
