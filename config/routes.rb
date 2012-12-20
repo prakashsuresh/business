@@ -63,6 +63,8 @@ Business::Application.routes.draw do
      match '/list_of_emp', :to =>'admin_main_page#list_of_emp'
      match '/salary', :to=>'salary#search_employee'
      match '/save_salary', :to=>'salary#save_salary'
+     match '/get_password', :to=>'login#get_password'
+     match '/forgot_password', :to=>'login#forgot_password'
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,0 +1,26 @@
+/**
+ * Tabs
+ *
+ * @author      Roland Franssen <franssen.roland@gmail.com>
+ * @license     MIT
+ * @version     1.0
+ **/
+
+.tab-container { margin:.5em 0 }
+.tab-container * { padding:0 ; margin:0 }
+
+.tab-container .tabs { height:25px; overflow:auto }
+.tab-container .tabs li { display:block; float:left; height:25px; line-height:25px; padding:0 .5em; background:#96abc8; border-right: 2px solid #5a90cc; }
+.tab-container .tabs li.current { font-weight:bold; background:#5a90cc }
+
+.tab-container .tabs li a { font-weight:bold; color:#000; text-decoration:none }
+.tab-container .tabs li a:hover {font-weight:bold; text-decoration:none }
+.tab-container .tabs li.current a,
+.tab-container .tabs li.current a:hover { font-weight:bold; color:#fff }
+
+.tab-container .tab { padding:1em; border:1px solid #5a90cc; border-top-width:2px }
+.tab-container .loading { color:red }
+.tab-container .empty { padding:1em; text-align:center; font-style:italic }
+
+.tab-container .tab-navigation { text-align:right; font-size:.8em; padding-top:.5em }
+.tab-container .tab-navigation a { color:#999; padding:0 .5em }
