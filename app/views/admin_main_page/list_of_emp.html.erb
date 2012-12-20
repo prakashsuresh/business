@@ -7,11 +7,11 @@
                     
 <table id="rounded-corner" class="tablesorter" summary="2007 Major IT Companies' Profit">
     <thead>
-    	<tr><th></th>
+    	<tr>
         	<th scope="col" class="rounded">Employee Id</th>
-            <th scope="col" class="rounded" >Name</th>
-           
-            <th scope="col" class="rounded" >Email ID<th>
+            <th scope="col" class="rounded">Name</th>
+            <th></th>
+            <th scope="col" class="rounded">Email ID</th>
             <th scope="col" class="rounded">Employee Type</th>
             <th scope="col" class="rounded">Edit</th>
             <th scope="col" class="rounded-q4">Delete</th>
@@ -27,22 +27,39 @@
         <% count=0%>
         <% for each_id in @list_of_emp %>
     	<tr>
-            <td><%= radio_button("user", "id", :value=>each_id.id) %> </td>
-        	<td><%=each_id.id%></td>
+           	<td><%= user_id= each_id.id%></td>
             <td colspan='2'><%=each_id.username%></td>
             <td><%=each_id.email%></td>
             <td><%=each_id.employee_type%></td>
-            <td><a href="edit?id=<%=each_id.id%>"><img src="/assets/user_edit.png" alt="" title="" border="0" /></a></td>
-            <td><a href="#" class="ask"><img src="/assets/trash.png" alt="" title="" border="0" /></a></td>
+             <td><a href="#" class="ask"><img src="/assets/user_edit.png" alt="" title="" border="0" /></a></td>
+            <td><%= link_to(image_tag("/assets/trash.png"), { :action => "delete", :user_id => each_id.id},:class => 'quick', :remote => true,:onclick =>"confirm_delete(('#{user_id}'))")%></td>
+           
         </tr>
        <%end%>
     </tbody>
 </table>
-
-<%= will_paginate @list_of_emp%>
+ <%= will_paginate @list_of_emp%>
 
 <!--<div class="pagination">
         <span class="disabled"> prev</span><span class="current">1</span><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>…<a href="">10</a><a href="">11</a><a href="">12</a>...<a href="">100</a><a href="">101</a><a href="">next >></a>
         </div> 
     </html>-->
     </div>
+    <div id='delete_user'></div>
+<script type="text/javascript">
+function confirm_delete(id)  {
+   var par=id
+
+    msg="Are sure delete this user?"
+    if (confirm(msg))
+    {
+       return true
+    }
+    else{
+        return false
+        
+    }
+    
+    // body...
+}
+</script>

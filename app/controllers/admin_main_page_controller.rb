@@ -54,7 +54,13 @@ class AdminMainPageController < ApplicationController
 		@nationlities=Nationality.all
 		@region=Region.all
 		@blood_group=BloodGroup.all
-		
+	end
 
+	def delete
+		raise params.inspect
+		user=Login.where(:id=>params[:user_id]).first
+		
+		user.destroy
+		redirect_to :action=>'list_of_emp'
 	end
 end
