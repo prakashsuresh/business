@@ -1,0 +1,7 @@
+
+
+welcome <%= Login.where(:id=>params[:user_id]).first.username%>
+ <%= submit_tag 'Login', :class=>"buttons", :id => 'goto_login'%>
+
+
+

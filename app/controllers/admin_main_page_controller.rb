@@ -26,6 +26,7 @@ class AdminMainPageController < ApplicationController
 	
 
 	def save
+   raise params.inspect 
 		@login=Login.new(params[:login])
 		status=@login.save
 		if status
@@ -33,7 +34,7 @@ class AdminMainPageController < ApplicationController
 		else
 		@d= Date.today
 		@emp_id = Login.last
-       	@inc_val = @emp_id.emp_id + 1      
+    @inc_val = @emp_id.emp_id + 1      
 		@gender=Gender.find(:all)
 		@nationlities=Nationality.find(:all)
 		@region=Region.find(:all)
@@ -49,13 +50,18 @@ class AdminMainPageController < ApplicationController
 	end
 
 	def edit
-		@edit= Login.where(:id => params[:id].to_i).first
-		@gender=Gender.all
-		@nationlities=Nationality.all
-		@region=Region.all
-		@blood_group=BloodGroup.all
+		@login= Login.where(:id => params[:user_id].to_i).first
+    @d= Date.today
+    @emp_id = Login.last
+    @gender=Gender.find(:all)
+    @nationlities=Nationality.find(:all)
+    @region=Region.find(:all)
+    @blood_group=BloodGroup.find(:all)    
+     @inc_val = @login.id  
 	end
-
+def update
+  ads
+end
 	def delete
 		user=Login.where(:id=>params[:user_id]).first
 		

@@ -1,0 +1,46 @@
+  <%= stylesheet_link_tag 'lightwindow' %>
+  <%= javascript_include_tag "lightwindow" ,"scriptaculous" , "prototype" %>
+      <%=form_tag :action => 'goto_login' do %>
+      <div id="login">
+        <div id="logintxtblank">
+          <div id="loginheading">
+            <table>
+<tr>
+           <td>User Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      
+          
+            <td><h6><%= radio_button :login, :usertype, 'admin'%> Admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h6></td>
+            <td><h6><%= radio_button :login, :usertype, 'employee' , :checked => true %> Employee</h6></td>
+           </tr>
+           </table>
+          </div>
+          <div id="username">User Name:</div>
+          <div id="input">
+            <label>
+              <input name="user_name_field" type="text" class="input" id="user_name_field" value="enter your user name" />
+            </label>
+          </div>
+          <div id="password">Password:</div>
+          <div id="input02">
+            <label>
+              <input name="password_field" type="password" class="input" id="password_field" value="password" />
+            </label>
+          </div>
+
+          <div id="loginbutton"> <%= submit_tag 'Login', :class=>"buttons", :id => 'goto_login'%></div>
+            <!--<a href="main_menu" class="login">login</a>-->
+          <div id="member">
+            <a   class="register" onclick = "myLightWindow.activateWindow({ href:'get_password',
+                    title: 'Getting Password ',
+                    width: '500px', 
+                    height: '200px',
+                    caption: ''
+                    });">Forgot Password</a> 
+          </div>
+          
+          <div id="error_message"> <% if notice %><%= notice %></div>
+      <% end %>
+        </div>
+      </div>
+<%end%>
+

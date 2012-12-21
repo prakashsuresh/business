@@ -1,0 +1,100 @@
+<%= form_for  @login, :url => {:action => "save" } do |f| %>
+<table width="550" height = "400" border="0">
+    <tr>
+        <td colspan="2" style="background-color:#ADDFFF;">
+            <h1>
+                <center>
+                    Employee Personal Details
+                </center>
+            </h1>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td style="background-color:#eeeeee;width:100px;text-align:top;">
+            <%=f.label :Emp_Id %>
+            <br/>
+            <%=f.text_field :emp_id, :value=>@inc_val,:readonly=>true %>
+            <br/>
+            <%=f.label :Emp_Name %>
+            <br/>
+            <%=f.text_field  :username ,:class => 'display_caps' %>
+            <br/>
+            <%=f.label :Emp_Roll %>
+            <br/>
+            <%=f.select :employee_type,{"SoftwareEngineer"=>"SoftwareEngineer","Testing"=>"Testing","Migration"=>"Migration","softwareDeveloper"=>"softwareDeveloper","SysAdmin"=>"SysAdmin","HR"=>"HR","Other"=>"Other"}, {:prompt=>"--Select--"} %>
+            <br/>
+            <%=f.label :Date_of_birth %>
+            <br/>
+            <%=f.text_field :dob, :id=>'demo1',:size=>15 %>
+            <a href="javascript:NewCal('demo1','ddmmyyyy')"><img src="assets/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a>
+            <br/>
+            <%=f.label :Address %>
+            <br/>
+            <%=f.text_field :adress %>
+            <br/>
+            <%=f.label :phone_no %>
+            <br/>
+            <%=f.text_field :phone_no %>
+            <br/>
+            <%=f.label :Email %>
+            <br/>
+            <%=f.text_field :email %>
+            <br/>
+            <%=f.label :Password %>
+            <br/>
+            <%=f.text_field :password %>
+            <br/>
+        </td>
+        <td style="background-color:#eeeeee;height:400px;width:10000px;text-align:top;">
+            <%=f.label :Gender %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=f.label :blood_group %>
+            <br/>
+            <%=f.collection_select :gender_id, @gender, 'id', 'name',{:prompt=>"--Select--"} %>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; <%=f.collection_select :blood_group_id, @blood_group, 'id', 'name', {:prompt=>"--Select--"} %>
+            <br/>
+            <%=f.label :region %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%=f.label :nationlity %>
+            <br/>
+            <%=f.collection_select :region_id, @region, 'id', 'name' ,{:prompt=>"--Select--"} %>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=f.collection_select :nationality_id, @nationlities, 'id', 'name',{:prompt=>"--Select--"} %>
+            <br/>
+            <%=f.label :start_date %>
+            <br/>
+            <%=f.text_field :admission_date, :value=>@d,:readonly=>true %>
+            <br/>
+            <%=f.label :basic_salary %>
+            <br/>
+            <%=f.text_field :basic_salary %>
+            <br/>
+            <%@accno=Time.new %>
+            <%@accno=@accno.strftime("%d%m%y") %>
+            <%@accno=@accno.to_s %>
+            <%@incrementid=@inc_val.to_s %>
+            <%@accnoincrementid=@accno+@incrementid %>
+            <%=f.label :bank_acc_no %>
+            <br/>
+            <%=f.text_field :bank_acc_no,:value=>@accnoincrementid %>
+            <br/>
+            <br>
+            <%=f.label :resume %>
+            <br/>
+            <%=f.file_field :resume %>
+            <br/>
+            <br>
+            <br>
+            <%=f.label :photo %>
+            <br/>
+            <%=f.file_field :photo %>
+            <br/>
+            <br>
+        </td>
+        <br/>
+    </tr>
+    <tr>
+    <tr>
+        <td colspan="2" style="background-color:#ADDFFF;text-align:center;">
+		   <%if params[:action] !='edit'%>
+            <%=submit_tag "create" %>
+			<%else%>
+			  <%=submit_tag "Update"%>
+			<%end%>
+        </td>
+    </tr>
+</table>
+<%end %>

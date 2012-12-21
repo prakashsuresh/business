@@ -32,7 +32,7 @@
             <td colspan='2'><%=each_id.username%></td>
             <td><%=each_id.email%></td>
             <td><%=each_id.employee_type%></td>
-             <td><a href="#" class="ask"><img src="/assets/user_edit.png" alt="" title="" border="0" /></a></td>
+			  <td><%= link_to(image_tag("/assets/user_edit.png"), {:action => 'edit' ,:user_id => each_id.id},:class => 'quick', :remote => true)%></td>
             <td><%= link_to(image_tag("/assets/trash.png"), {:user_id => each_id.id},:class => 'quick', :remote => true,:onclick =>"confirm_delete(('#{user_id}'))")%></td>
            
         </tr>

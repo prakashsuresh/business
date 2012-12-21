@@ -1,0 +1,71 @@
+9
+
+dir
+4
+svn://192.168.4.136/svnrepos/business/vendor/plugins/paperclip/lib
+svn://192.168.4.136/svnrepos
+
+
+
+2012-12-21T07:43:11.930431Z
+3
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+577bf391-3dce-4b54-8930-cfdb555150b1
+
+generators
+dir
+
+paperclip
+dir
+
+paperclip.rb
+file
+
+
+
+
+2012-12-21T09:04:27.000000Z
+e24a64307abf150fb08a4a9fe47b14ed
+2012-12-21T07:43:11.930431Z
+3
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10578
+
+tasks
+dir
+

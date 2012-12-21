@@ -1,0 +1,59 @@
+ <div id="contentmid">
+        <div class="midheading">
+          <h2>Somelines about us</h2>
+        </div>
+        <div class="midtxt"><span class="midboldtxt">Nulla eget lacus ac duidictum ellentesque dapibus nibh ornare</span><br />
+          volutpat, diam leo vestibulum lectus, eu molestie elit est eu ipsum. Ut accumsan nisl eu velit. Morbi eros felis, ornare sed, vestibulum cursus, vehicula et, nisl. Etiam adipiscing. </div>
+        <div id="comments">
+          <div id="addcomments"><a href="#" class="addcomments">Add Commend</a></div>
+          <div id="morecomments"><a href="#" class="morecomments">read more</a></div>
+        </div>
+        <div class="midheading">
+          <h2>Latest Projects<span class="projectheading">Wednesday, May 07, 2008</span></h2>
+        </div>
+        <div id="projectbg">
+          <div id="projectthumnail"></div>
+          <div id="projecttxtblank">
+            <div id="projecttxt"><span class="projectboldtxt">Nulla venenati sed varius an teproin</span> libero aecenas dapibus am gravida ante quis arcu liquam eleifend. Donec at elit. Integer lectus dolor utrum a volutpat .<br />
+            </div>
+            <div id="moreproject"><a href="#" class="moreproject">read more</a></div>
+          </div>
+        </div>
+        <div class="midheading">
+          <h2>Our main purpose</h2>
+        </div>
+        <div id="purposetxt">Donec posuere bibendum erat. Etiam commodo consectetuer tellus. Ut ut tellus eget nisl fermentum egestas. Ut consequat, </div>
+        <div id="purposenav">
+          <ul>
+            <li><a href="#" class="purposenav">Conubia nostra per inceptos</a></li>
+            <li><a href="#" class="purposenav">Etiam porta ullam sodales libe</a></li>
+          </ul>
+          <ul>
+            <li><a href="#" class="purposenav">Lobortis ac mauris mauris</a></li>
+            <li><a href="#" class="purposenav">Sed varius ante roin sed ped</a></li>
+          </ul>
+        </div>
+        <div class="midtxt"><span class="midboldtxt">Morbi porta odio id erat. Curabitur ut massa uspendisse ipsum. In vitae dolor eget lorem</span> Suspendisse massa lacus, ullamcorper ac, pulvinar ut, aliquet et, elit. </div>
+      </div>
+      <div id="contentright">
+        <div class="rightheading">
+          <h4>Photo Gallery</h4>
+        </div>
+        <div id="galleryblank">
+          <div id="rightpic"><a href="#" class="rightpic"></a></div>
+          <div id="rightpic02"><a href="#" class="rightpic02"></a></div>
+          <div id="rightpic03"><a href="#" class="rightpic03"></a></div>
+          <div class="viewbutton"><a href="#" class="view"> view more</a></div>
+          <div class="rightheading">
+            <h4>Creative story</h4>
+          </div>
+          <div class="righttxt"><span class="rightboldtxt">01. aliquet tempor nisi tellus </span>bibendum nunc. Sed venenatis scelerisque ipsum.</div>
+          <div class="righttxt"><span class="rightboldtxt">02.  Tempor nisi tellus </span><br />
+            Ndum nunc. Sed venenatis scelerisque ipsum.</div>
+          <div class="righttxt"><span class="rightboldtxt">03.  Kempor sisi vellus </span><br />
+            Qchdum nunc. Sed venenatis scelerisque ipsum.</div>
+          <div class="righttxt"><span class="rightboldtxt">04. Aliquet tempor nisi tellus </span>bibendum nunc. Sed venenatis</div>
+          <div class="viewbuttonbot"><a href="#" class="view"> read more</a></div>
+        </div>
+      </div>
+   

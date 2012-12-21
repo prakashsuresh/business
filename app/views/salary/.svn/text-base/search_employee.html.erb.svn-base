@@ -1,0 +1,25 @@
+<div class="right_content">  
+
+  <table width="550" height = "500" border="0">
+  	<fieldset  class="field_set">
+  	<%= form_tag :action => 'save_salary',:id=>'form_salary_detail' do  %>
+	
+		<legend>Salary Detail</legend>
+		<%= fields_for :salary, @client do |s| %>
+		<%= s.text_field :user_id, :size=>20 ,:value=>"Enter Employee Id"%>
+		<%= submit_tag 'Submit', :class=>"buttons", :id => 'save_salary_detail',:onclick=>"new_value()"%>
+		<input type="button" value="Print" onclick="window.print()" />
+		<%end%>
+<%end%>
+</fieldset>
+</table>
+
+</div>
+<script type="text/javascript">
+function new_value()
+{
+	window.location.reload();
+}
+
+
+</script>
