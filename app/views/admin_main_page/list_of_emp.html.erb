@@ -1,4 +1,5 @@
 
+
 <div class="right_content">                    
 
 
@@ -32,13 +33,12 @@
             <td><%=each_id.email%></td>
             <td><%=each_id.employee_type%></td>
              <td><a href="#" class="ask"><img src="/assets/user_edit.png" alt="" title="" border="0" /></a></td>
-            <td><%= link_to(image_tag("/assets/trash.png"), { :action => "delete", :user_id => each_id.id},:class => 'quick', :remote => true,:onclick =>"confirm_delete(('#{user_id}'))")%></td>
+            <td><%= link_to(image_tag("/assets/trash.png"), {:user_id => each_id.id},:class => 'quick', :remote => true,:onclick =>"confirm_delete(('#{user_id}'))")%></td>
            
         </tr>
        <%end%>
     </tbody>
 </table>
-<<<<<<< HEAD
  <%= will_paginate @list_of_emp%>
 
 <!--<div class="pagination">
@@ -49,14 +49,18 @@
     <div id='delete_user'></div>
 <script type="text/javascript">
 function confirm_delete(id)  {
-   var par=id
-
+   var pars=id
     msg="Are sure delete this user?"
     if (confirm(msg))
     {
-       return true
+        alert(pars)
+      var myAjax = new Ajax.Updater('delete_user', 'delete_user_id', {
+               method: 'get',
+                parameters: pars
+            });
     }
     else{
+        alert("Sd")
         return false
         
     }
@@ -64,11 +68,4 @@ function confirm_delete(id)  {
     // body...
 }
 </script>
-=======
 
-
-<%= will_paginate @list_of_emp%>
-
-
-    </div>
->>>>>>> 52dd60b2466dde186934990683b37535dfa31d8c

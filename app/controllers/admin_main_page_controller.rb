@@ -57,7 +57,6 @@ class AdminMainPageController < ApplicationController
 	end
 
 	def delete
-		raise params.inspect
 		user=Login.where(:id=>params[:user_id]).first
 		
 		user.destroy

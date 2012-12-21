@@ -8,6 +8,8 @@
 <script type="text/javascript" src="/assets/clockh.js"></script>
 <script type="text/javascript" src="/assets/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/ddaccordion.js"></script>
+<script type="text/javascript" src="/assets/prototype.js"></script>
+<script type="text/javascript" src="/assets/ajax_scaffold.js"></script>
 <script type="text/javascript">
 ddaccordion.init({
 headerclass: "submenuheader", //Shared CSS class name of headers group
@@ -50,7 +52,7 @@ $(function() {
    
    
     });
-    $("#rounded-corner").tablesorter(); 
+    
 
 <% if session[:selected_tab].blank? || session[:selected_tab]=="home" %>
 $("#ad_home").click();
